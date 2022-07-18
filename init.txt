@@ -1,0 +1,6 @@
+1 git clone https://github.com/rottenMonke/disapearing-messages-chat-back-end
+2 git clone https://github.com/rottenMonke/dissapearing-messages-front-end.git
+
+Set envs
+
+docker-compose up --build
