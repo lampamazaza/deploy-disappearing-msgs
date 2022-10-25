@@ -1,4 +1,4 @@
-FROM node:18.4.0-slim as build
+FROM node:18.11.0-slim as build
 WORKDIR /usr/src/app
 COPY ./dissapearing-messages-front-end/package*.json ./
 
@@ -6,7 +6,7 @@ RUN npm ci --audit=false
 
 COPY ./dissapearing-messages-front-end .
 
-RUN npm run build
+RUN VITE_API_ROOT="/api" npm run build
 
 FROM nginx:latest
 COPY ./nginx.conf /etc/nginx/nginx.conf

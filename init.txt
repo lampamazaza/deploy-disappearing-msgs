@@ -1,6 +1,4 @@
-1 git clone https://github.com/rottenMonke/disapearing-messages-chat-back-end
-2 git clone https://github.com/rottenMonke/dissapearing-messages-front-end.git
-
+git clone https://github.com/lampamazaza/disapearing-messages-chat-back-end
+git clone https://github.com/lampamazaza/dissapearing-messages-front-end.git
 Set envs
-
 docker-compose up --build
