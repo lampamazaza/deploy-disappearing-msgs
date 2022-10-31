@@ -5,6 +5,8 @@ services:
     build:
       context: .
       dockerfile: ./docker-back-end.dockerfile
+    volumes:
+      - ./db:/usr/src/app/prisma
     container_name: nodejs
     restart: unless-stopped
     ports:
@@ -21,9 +23,11 @@ services:
       context: .
       dockerfile: ./docker-reverse-proxy.dockerfile
     container_name: nginx
+    volumes: 
+     - ./certs:/etc/nginx/certs
     restart: unless-stopped
     ports:
-      - "8000:80"
+      - "443:443"
     networks:
       - app-network
 

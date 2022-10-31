@@ -1,4 +1,5 @@
 git clone https://github.com/lampamazaza/disapearing-messages-chat-back-end
 git clone https://github.com/lampamazaza/dissapearing-messages-front-end.git
 Set envs
+Put certs
 docker-compose up --build
