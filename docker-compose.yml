@@ -23,8 +23,6 @@ services:
       context: .
       dockerfile: ./docker-reverse-proxy.dockerfile
     container_name: nginx
-    volumes: 
-     - ./certs:/etc/nginx/certs
     restart: unless-stopped
     ports:
       - "443:443"
